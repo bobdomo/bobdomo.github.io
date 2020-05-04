@@ -6,6 +6,7 @@ Description:
 Version: 1.3
 
 Main Font    : Poppins
+Sub fonts    : Font Awesome 5 Free, Open Sans, Times New Roman, Montserrat
 Main Color   : #c11edf
 
 -------------------------------------
@@ -60,7 +61,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   overflow-x: hidden;
-  background-color: #ffffff;
+  background-color: #f0eef0;
   color: #666666;
 }
 
@@ -69,7 +70,7 @@ html, body, .wrapper {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #323a45;
+  color: #c11edf;
   font-weight: normal;
   line-height: 1.2;
   font-family: 'Poppins', sans-serif;
@@ -2969,12 +2970,12 @@ blockquote {
   display: inline-block;
   font-family: "Poppins",sans-serif;
   font-weight: 600;
-  margin-top: 15px;
-  padding: 10px 35px;
+  margin-top: 2px;
+  padding: 10px 60px;
   text-transform: uppercase;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
-  border-radius: 30px;
+  border-radius: 2px;
 }
 
 .contact-us-area .contact-form button i {
@@ -3385,7 +3386,7 @@ blockquote {
 =================================================================== */
 
 footer .f-item p {
-  color: #999999;
+  color: #c11edf;
 }
 
 footer .f-item > h3,
@@ -3503,8 +3504,8 @@ footer .footer-bottom {
   background: #f4f4f4 none repeat scroll 0 0;
   border-top: 1px solid #e7e7e7;
   margin-top: 75px;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 footer .footer-bottom p {
@@ -3694,4 +3695,112 @@ footer.demo .copyright {
 }
 .banner-area.demo-banner {
   padding: 50px 0;
+}
+
+/* dropdown solution codepen */
+
+
+/* select codepen */
+/* body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f39c12;
+} */
+/* h1 {
+  margin: 0 0 0.25em;
+} */
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #fff;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  line-height: 3.5;
+  background: #fff;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #323a45;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #fff;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #c11edf;
+}
+
+/* propositionoverlay codepen custom */
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.content-details h3{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.content-details p{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-top{
+  top: 20%;
 }
