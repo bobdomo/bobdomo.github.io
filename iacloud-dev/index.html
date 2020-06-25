@@ -529,10 +529,10 @@
                             <div class="select">
                               <select name="slct" id="slct">
                                 <option selected disabled>Choose a solution</option>
-                                <option value="1">Urban Observatory</option>
-                                <option value="2">ALICE</option>
-                                <option value="3">IAC Lara</option>
-                                <option value="4">JobTune</option>
+                                <option value="Urban Observatory">Urban Observatory</option>
+                                <option value="Alice">ALICE</option>
+                                <option value="LARA">IAC Lara</option>
+                                <option value="Jobtune">JobTune</option>
                               </select>
                             </div>
                           </div>
@@ -542,9 +542,29 @@
 
                     <div class="row">
                       <div class="col-md-12">
-                        <a class="btn btn-theme effect btn-md" href="#">Contact Us</a>
+                        <a class="btn btn-theme effect btn-md" onclick=contactus()>Contact Us</a>
                     </div>
                 </div>
+
+                <script>
+                function contactus(){
+                var firstname = document.getElementById('firstname').value;
+                var lastname = document.getElementById('lastname').value;
+                var email =  document.getElementById('email').value;
+                var phone = document.getElementById('phone').value;
+                var produts = document.getElementById('slct').value;
+                var company = document.getElementById('company').value;
+
+                console.log(firstname);
+                console.log(lastname);
+                console.log(email);
+                console.log(phone);
+                console.log(produts);
+                console.log(company);
+
+                window.location='mailto:enquiries@theiac.com?subject=Enquiry On '+produts+'&body=Hi, my name is '+ firstname +' '+ lastname +'and my phone number is:'+ phone +'from company: '+ company +' I would like to know on your product called: '+ produts +' hoping your response towards this matter.';
+              }
+                 </script>
 
             </div>
             <div class="col-md-6 address">
@@ -573,7 +593,7 @@
                             <!-- <img src="assets/img/logo.png" alt="Logo"> -->
                             <h4>Visit Us</h4>
                             <p>
-                              Tower 3, Avenue 5,<br>The Horizon Bangsar South,<br>No. 8 Jalan Kerinchi,<br>59200 Kuala Lumpur,<br>Malaysia.<br><br><h5>Call Us</h5>+603 2730 0300
+                              Tower 3, Avenue 5,<br>The Horizon Bangsar South,<br>No. 8 Jalan Kerinchi,<br>59200 Kuala Lumpur,<br>Malaysia.<br><br><h5>Call Us</h5> <a href="tel:+603 2730 0300">+603 2730 0300</a>
                             </p>
 
 
@@ -592,16 +612,16 @@
                               <h5>Follow Us</h5>
                               <ul>
                                   <li>
-                                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                      <a href="https://www.facebook.com/genaxis.official/"><i class="fab fa-facebook-f"></i></a>
                                   </li>
                                   <li>
-                                      <a href="#"><i class="fab fa-twitter"></i></a>
+                                      <a href="https://twitter.com/genaxisofficial"><i class="fab fa-twitter"></i></a>
                                   </li>
                                   <li>
-                                      <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                      <a href="https://www.youtube.com/channel/UCSzt0WcGL_iDfzntiKKCuNg"><i class="fab fa-youtube"></i></a>
                                   </li>
                                   <li>
-                                      <a href="#"><i class="fab fa-dribbble"></i></a>
+                                      <a href="http://www.genaxis.com.my/"><i class="fab fa-dribbble"></i></a>
                                   </li>
                               </ul>
                             </div>
@@ -617,9 +637,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="col-md-6">
-                            <p>&copy; Copyright 2020. All Rights Reserved by <a href="#">holiDendi</a></p>
+                            <p>&copy; Copyright 2020. Developed by <a href="#">daniel.muhalli</a></p>
                         </div>
-                        <div class="col-md-6 text-right link">
+                        <!-- <div class="col-md-6 text-right link">
                             <ul>
                                 <li>
                                     <a href="#">Terms</a>
@@ -631,7 +651,7 @@
                                     <a href="#">Support</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
